@@ -1,3 +1,5 @@
+# create a matrix object, and initialise it right away,
+# before returning its public methods
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
   m <- NULL
@@ -24,6 +26,8 @@ makeCacheMatrix <- function(x = matrix()) {
   )
 }
 
+# get the inverse of our matrix object above, caching it
+# if it hasn't yet been cached
 cacheSolve <- function(x, ...) {
   inv <- x$getInverse()
 
